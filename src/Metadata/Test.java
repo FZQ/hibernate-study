@@ -14,6 +14,10 @@ import Metadata.metamodel.MetaLink;
 import Metadata.metamodel.MetaObject;
 import Metadata.metamodel.MetaPackage;
 import Metadata.metamodel.MetaSlot;
+import Metadata.subject.Subject;
+import Metadata.subject.SubjectDomain;
+import Metadata.subject.SubjectField;
+import Metadata.subject.SubjectSet;
 import Metadata.test.Person;
 import Metadata.test.PersonImpl;
 
@@ -115,6 +119,11 @@ public class Test {
 		conf.addAnnotatedClass(MetaLink.class);
 		conf.addAnnotatedClass(MetaAssociation.class);
 		conf.addAnnotatedClass(MetaSlot.class);
+		
+		conf.addAnnotatedClass(Subject.class);
+		conf.addAnnotatedClass(SubjectSet.class);
+		conf.addAnnotatedClass(SubjectDomain.class);
+		conf.addAnnotatedClass(SubjectField.class);
 //		conf.addAnnotatedClass(Person.class);
 //		conf.addAnnotatedClass(Man.class);
 //		conf.addAnnotatedClass(Woman.class);
