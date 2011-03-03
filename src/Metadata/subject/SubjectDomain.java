@@ -9,7 +9,7 @@ import Metadata.metamodel.MetaObject;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED) 
-@Table(name="HBSubjectDomain")
+@Table(name="MDR_SUBJECT_SUBJECTDOMAIN")
 public class SubjectDomain extends MetaObject{
 
 }

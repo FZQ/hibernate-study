@@ -2,14 +2,11 @@ package Metadata.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 import Metadata.metamodel.MetaObject;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "MDR_DB_FIELD")
 public class Field extends MetaObject {
 	@Column(name = "LEN", length = 64, nullable = true, scale = 0)

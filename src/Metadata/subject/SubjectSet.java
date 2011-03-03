@@ -1,7 +1,7 @@
 package Metadata.subject;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
@@ -15,21 +15,21 @@ import Metadata.metamodel.MetaObject;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "HBSubjectSet")
+@Table(name = "MDR_SUBJECT_SUBJECTSET")
 public class SubjectSet extends MetaObject {
 
 	@OneToMany
-	private Set<Subject> subjects = new HashSet<Subject>();
+	private List<Subject> subjects = new ArrayList<Subject>();
 
 	@ManyToOne
 	@JoinColumn(name = "DOMAINID")
 	private SubjectDomain owner = null;
 
-	public void setSubjects(Set<Subject> subjects) {
+	public void setSubjects(List<Subject> subjects) {
 		this.subjects = subjects;
 	}
 
-	public Set<Subject> getSubjects() {
+	public List<Subject> getSubjects() {
 		return subjects;
 	}
 
